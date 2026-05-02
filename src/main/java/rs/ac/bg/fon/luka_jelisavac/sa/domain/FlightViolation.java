@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -37,4 +39,11 @@ public class FlightViolation {
      * Status flag indicating if legal obligations or fines have been met.
      */
     private Boolean isResolved;
+
+    /**
+     * Date when violation was registered.
+     * Must be in the past or at the moment of issuing.
+     */
+    @PastOrPresent
+    private LocalDateTime issueDate;
 }
