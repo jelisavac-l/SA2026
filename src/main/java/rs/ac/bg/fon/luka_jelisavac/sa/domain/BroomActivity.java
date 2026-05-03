@@ -47,4 +47,11 @@ public abstract class BroomActivity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "performer_id")
     private MinistryStaff performedBy;
+
+    /**
+     * Relationship defined in base class so subclasses can access it
+     */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "broomstick_id")
+    private Broomstick broomstick;
 }
