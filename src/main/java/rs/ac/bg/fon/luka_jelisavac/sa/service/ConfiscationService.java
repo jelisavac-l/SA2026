@@ -1,9 +1,5 @@
 package rs.ac.bg.fon.luka_jelisavac.sa.service;
 
-/**
- * @author Luka Jelisavac (jelisavac-l)
- */
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +15,7 @@ import java.util.UUID;
 /**
  * Service managing the legal seizure and release of broomsticks.
  * Coordinates between flight violations and the physical state of the asset.
+ * @author Luka Jelisavac (jelisavac-l)
  */
 @Service
 @RequiredArgsConstructor
