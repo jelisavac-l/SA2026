@@ -1,9 +1,5 @@
 package rs.ac.bg.fon.luka_jelisavac.sa.service;
 
-/**
- * @author Luka Jelisavac (jelisavac-l)
- */
-
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
