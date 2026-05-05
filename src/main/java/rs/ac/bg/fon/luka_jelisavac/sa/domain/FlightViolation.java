@@ -1,9 +1,6 @@
 package rs.ac.bg.fon.luka_jelisavac.sa.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 
@@ -46,4 +43,11 @@ public class FlightViolation {
      */
     @PastOrPresent
     private LocalDateTime issueDate;
+
+    /**
+     * Owner of the broom who caused flight violation.
+     */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id", nullable = false)
+    private BroomstickOwner owner;
 }
