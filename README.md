@@ -1,6 +1,8 @@
 # Softverski Alati 2026
 Projektni rad iz predmeta "Softverski alati".
 
+> 554/22
+
 ## Konfiguracija
 Potrebno je pokrenuti PostgreSQL bazu verzije 18.3+ i popuniti `.env` fajl:
 ```env
